@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html body .responsive {
+  display: none;
+}
+nav#navbar {
+  width: 100%;
+  height: 70px;
+  background: rgb(239, 239, 239, 0.6);
+}
+
+nav ul#navbar-wrapper {
+  display: flex;
+  width: 80%;
+  height: 70px;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+}
+nav ul ul#logo {
+  display: flex;
+}
+nav ul ul#logo a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  /*? color: rgb(216, 180, 254);  apply when background is dark  */
+  color: rgb(126, 34, 206);
+  color-scheme: dark;
+  cursor: pointer;
+  font-weight: 700;
+}
+nav ul ul#menus {
+  display: flex;
+  justify-content: space-around;
+}
+nav ul ul#menus li {
+  padding: 8px;
+}
+nav ul ul#menus li a {
+  color: black;
+  /* ? color: white;  when bg is dark*/
+}
+
+nav ul ul#menus li:hover {
+  border-bottom: 2px solid rgb(126, 34, 206);
+  /* ? border-bottom: 2px  solid rgb(216, 180, 254); when bg is dark */
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  html body .responsive {
+    position: fixed;
+    font-size: 30px;
+    z-index: 100;
+  }
+  #bars {
+    display: block;
+  }
+  nav ul#navbar-wrapper {
+    display: block;
+    margin: 0%;
+  }
+  nav ul ul#logo {
+    position: absolute;
+    right: 0;
+  }
+  nav ul ul#menus {
+    transition: all 0.5s;
+    transform: translateX(-500px);
+    width: 20vw;
+    background: rgb(223, 199, 199);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: 0.9;
+    align-items: center;
+    position: fixed;
+  }
+}
+@media (min-width: 601px) {
+  html body i.responsive {
+    display: none;
+  }
+}
